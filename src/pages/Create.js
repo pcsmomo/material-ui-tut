@@ -24,7 +24,7 @@ export default function Create() {
       <Button
         onClick={() => console.log('you clicked me')}
         type="submit"
-        color="primary"
+        color="secondary"
         variant="contained"
         endIcon={<KeyboardArrowRight />}
       >
