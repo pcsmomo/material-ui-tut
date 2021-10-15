@@ -20,4 +20,10 @@ npm install @material-ui/core
 />
 ```
 
+### 4. Icons
+
+```sh
+npm install @material-ui/icons
+```
+
 </details>
