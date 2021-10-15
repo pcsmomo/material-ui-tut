@@ -4,13 +4,30 @@ import Button from '@material-ui/core/Button';
 // import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Container from '@material-ui/core/Container';
 // import AcUnitOutlinedIcon from '@material-ui/icons/AcUnitOutlined';
-import SendIcon from '@material-ui/icons/Send';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  btn: {
+    fontSize: 60,
+    backgroundColor: 'violet',
+    '&:hover': {
+      background: 'blue',
+    },
+  },
+  title: {
+    textDecoration: 'underline',
+    marginBottom: 20,
+  },
+});
 
 export default function Create() {
+  const classes = useStyles();
+
   return (
     <Container>
       <Typography
+        className={classes.title}
         variant="h6"
         color="textSecondary"
         component="h2"
@@ -31,11 +48,12 @@ export default function Create() {
       </Typography> */}
 
       <Button
+        className={classes.btn}
         onClick={() => console.log('you clicked me')}
         type="submit"
         color="secondary"
         variant="contained"
-        startIcon={<SendIcon />}
+        // startIcon={<SendIcon />}
         endIcon={<KeyboardArrowRight />}
       >
         Submit
